@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Millena Araujo Lash Design | Extensão de cílios</title>
+<meta name="description" content="Extensão de cílios com tufos de seda e de nó, efeito gatinho e agendamento online. Millena Araujo Lash Design.">
+<meta name="theme-color" content="#f6ebe7">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23b76e79'/%3E%3Ctext x='32' y='43' font-size='34' text-anchor='middle' fill='white' font-family='serif'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topo" id="topo">
+  <div class="container topo-in">
+    <a class="logo" href="#inicio" aria-label="Millena Araujo Lash Design"><img src="assets/logo.png" alt="Millena Araujo Lash Designer" onerror="this.outerHTML='Millena Araujo <span>Lash Design</span>'"></a>
+    <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">☰</button>
+    <nav id="menu" class="menu">
+      <a href="#sobre">Minha história</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#precos">Preços</a>
+      <a href="#promocoes" data-promo-link hidden>Promoções</a>
+      <a href="#agendamento">Agendar</a>
+      <a href="#pagamento">Pagamento</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="container hero-in">
+      <p class="eyebrow">Extensão de cílios</p>
+      <h1>Um olhar marcante, com cuidado em cada fio.</h1>
+      <p class="lead">Tufos de seda, tufos de nó e efeito gatinho. Escolha o serviço, reserve seu horário e confirme com um sinal de 50%.</p>
+      <div class="hero-acoes">
+        <a class="btn" href="#agendamento">Agendar horário</a>
+        <a class="btn btn-claro" href="#precos">Ver preços</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao" id="sobre">
+    <div class="container sobre">
+      <div class="fotos-formatura">
+        <figure class="foto-formatura">
+          <img src="assets/formatura.jpg" alt="Millena Araujo na formatura do Projeto Somos Um, segurando as pinças de cílios" loading="lazy"
+               onerror="this.parentElement.classList.add('sem-foto');this.remove()">
+          <span class="ph">Foto da formatura</span>
+        </figure>
+        <div class="mini-fotos">
+          <img src="assets/formatura-2.jpg" alt="Millena comemorando a formatura com confete no pódio do Projeto Somos Um" loading="lazy" onerror="this.remove()">
+        </div>
+      </div>
+      <div class="sobre-texto" id="minha-historia">
+        <p class="eyebrow">Minha história</p>
+        <h2>Minha história como Lash Designer</h2>
+        <p>Meu nome é Millena, tenho 14 anos e queria contar um pouco de como comecei na área de extensão de cílios.</p>
+        <p>Tudo começou quando uma amiga minha fez o curso. Eu olhava aquela experiência com inspiração e sentia uma vontade enorme de aprender também. Até que chegou o dia em que consegui a minha vaga em um projeto gratuito chamado Projeto Somos Um, onde fiz meu curso de cílios. Foi, sem dúvidas, um dos dias mais felizes para mim.</p>
+        <p>Mas não foi tudo fácil. A caminhada teve desafios, momentos em que quis desistir e pensei que não ia conseguir. Mas eu escolhi continuar. Persisti, concluí o curso e me formei.</p>
+        <p>Hoje, quando olho para os meus resultados, sinto um orgulho enorme de mim mesma. Consigo ver o quanto evoluí e o quanto ainda posso crescer. Fazer cílios me traz paz e me faz feliz, não só um trabalho, mas algo que faço com amor.</p>
+        <p>Essa é só a minha história começando. Tenho muito pra aprender e muitos sonhos pra realizar. Mas tenho orgulho de não ter desistido quando pensei que não conseguiria.</p>
+        <blockquote>Porque, às vezes, tudo o que precisamos é de uma oportunidade, coragem pra começar e persistência pra continuar.</blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao secao-clara" id="galeria">
+    <div class="container">
+      <p class="eyebrow">Galeria</p>
+      <h2>Trabalhos realizados</h2>
+      <div class="galeria" id="galeriaGrade"></div>
+    </div>
+  </section>
+
+  <section class="secao" id="precos">
+    <div class="container">
+      <p class="eyebrow">Tabela de preços</p>
+      <h2>Serviços</h2>
+      <div class="cards" id="listaPrecos"></div>
+
+      <h3 class="sub">Adicionais</h3>
+      <div class="cards cards-2">
+        <article class="card">
+          <h4>Mais volume ou volumão</h4>
+          <p class="preco" id="precoVolume"></p>
+          <p class="muted">Acrescenta ao valor do serviço escolhido.</p>
+        </article>
+        <article class="card">
+          <h4>Taxa de deslocamento</h4>
+          <p class="preco" id="precoDesloc"></p>
+          <p class="muted">Valor conforme a sua localização, confirmado antes do atendimento.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROMOÇÕES SAZONAIS (independente) =====
+       Para remover de vez: apague esta seção, o link data-promo-link no menu
+       e a linha <script src="promocoes.js">. O resto do site continua funcionando. -->
+  <section class="secao promo" id="promocoes" hidden>
+    <div class="container promo-in">
+      <div>
+        <p class="eyebrow">Promoção sazonal</p>
+        <h2 data-promo="titulo"></h2>
+        <p class="lead" data-promo="descricao"></p>
+        <p class="muted" data-promo="validade"></p>
+        <a class="btn" href="#agendamento">Aproveitar agora</a>
+      </div>
+      <div class="selo"><strong data-promo="percentual"></strong><span>de desconto</span></div>
+    </div>
+  </section>
+
+  <section class="secao secao-clara" id="agendamento">
+    <div class="container">
+      <p class="eyebrow">Agendamento</p>
+      <h2>Reserve seu horário</h2>
+      <form id="formAgenda" class="agenda" novalidate>
+        <div class="agenda-campos">
+          <fieldset>
+            <legend>1. Escolha o serviço</legend>
+            <div class="opcoes" id="opcoesServico"></div>
+          </fieldset>
+
+          <fieldset>
+            <legend>2. Adicionais</legend>
+            <label class="check"><input type="checkbox" id="optVolume"> <span>Mais volume ou volumão <em id="lblVolume"></em></span></label>
+            <label class="check"><input type="checkbox" id="optDomicilio"> <span>Atendimento em domicílio <em id="lblDesloc"></em></span></label>
+            <label class="campo" id="campoEndereco" hidden>Endereço ou bairro
+              <input type="text" id="endereco" placeholder="Rua, número e bairro">
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>3. Data e horário</legend>
+            <div class="linha">
+              <label class="campo">Data
+                <input type="date" id="data" required>
+              </label>
+              <label class="campo">Horário
+                <select id="horario" required><option value="">Escolha a data primeiro</option></select>
+              </label>
+            </div>
+            <p class="aviso" id="avisoData" hidden></p>
+          </fieldset>
+
+          <fieldset>
+            <legend>4. Seus dados</legend>
+            <div class="linha">
+              <label class="campo">Nome
+                <input type="text" id="nome" autocomplete="name" required>
+              </label>
+              <label class="campo">WhatsApp
+                <input type="tel" id="telefone" autocomplete="tel" placeholder="(21) 99999-9999" required>
+              </label>
+            </div>
+            <label class="campo">Observações (opcional)
+              <textarea id="obs" rows="2"></textarea>
+            </label>
+          </fieldset>
+        </div>
+
+        <aside class="resumo" aria-live="polite">
+          <h3>Resumo</h3>
+          <div id="resumoLinhas"><p class="muted">Escolha um serviço para ver o valor.</p></div>
+          <p class="erro" id="erroForm" hidden></p>
+          <button class="btn btn-bloco" type="submit">Continuar para o pagamento</button>
+        </aside>
+      </form>
+    </div>
+  </section>
+
+  <section class="secao" id="pagamento">
+    <div class="container">
+      <p class="eyebrow">Pagamento</p>
+      <h2>Sinal de 50% para confirmar</h2>
+      <ol class="passos">
+        <li><strong>Preencha o agendamento</strong> com serviço, data e horário.</li>
+        <li><strong>Pague o sinal de 50%</strong> via Pix.</li>
+        <li><strong>Envie o comprovante</strong> pelo WhatsApp e seu horário fica confirmado.</li>
+      </ol>
+      <div class="pix" id="painelPix" hidden>
+        <div class="pix-info">
+          <p class="muted">Valor do sinal</p>
+          <p class="pix-valor" id="pixValor"></p>
+          <p class="muted" id="pixRestante"></p>
+          <label class="campo" id="blocoCopia">Pix copia e cola
+            <textarea id="pixCodigo" rows="4" readonly></textarea>
+          </label>
+          <p class="aviso" id="pixAviso" hidden></p>
+          <div class="hero-acoes">
+            <button class="btn btn-claro" type="button" id="btnCopiar">Copiar código Pix</button>
+            <a class="btn" id="btnWhats" href="#" target="_blank" rel="noopener">Enviar comprovante no WhatsApp</a>
+          </div>
+        </div>
+        <div class="pix-qr" id="blocoQr"><div id="qr"></div><p class="muted">Ou leia o QR Code no app do seu banco</p></div>
+      </div>
+      <p class="muted" id="pagVazio">Finalize o agendamento acima para liberar o pagamento do sinal.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="container rodape-in">
+    <strong>Millena Araujo Lash Design</strong>
+    <span id="rodapeContato"></span>
+    <small>© <span id="ano"></span> Todos os direitos reservados.</small>
+  </div>
+</footer>
+
+<a class="zap" id="zapFlutuante" href="#agendamento" aria-label="Falar no WhatsApp">WhatsApp</a>
+
+<dialog id="lightbox"><button class="fechar" aria-label="Fechar">×</button><img alt=""></dialog>
+
+<script src="config.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+<script src="pix.js" defer></script>
+<script src="promocoes.js" defer></script>
+<script src="app.js" defer></script>
+</body>
+</html>
